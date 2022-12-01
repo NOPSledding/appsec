@@ -1,5 +1,6 @@
-# The following is an example of a CODEOWNERs file
-# that tags important files for an Infosec team
+# The following is an example of a CODEOWNERs file that tags important files for an Infosec team
+# Please note that Github will correctly state that there are errors in this file as there is
+# not an @infosec team to be tagged.
 
 # Ensure infosec team isn't removed from CODEOWNERs
 CODEOWNERS @infosec
