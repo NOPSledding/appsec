@@ -1,17 +1,17 @@
-name: Snyk Auto Import
+name: Auto Codeowners
 
 on:
   schedule:
-    # Run at 11:00 UTC everyday
-    - cron: "0 11 * * *"
+    # Run at 12:00 UTC everyday
+    - cron: "0 12 * * *"
   workflow_dispatch:
     
 jobs:
-  snyk-auto-import:
+  auto-codeowners:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python
+      - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
@@ -19,6 +19,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pygithub
-      - name: Run Snyk Auto Importer
+      - name: Run Auto Codeowners
         run: |
-          python ./snyk-auto-importer/snyk-auto-importer.py ${{secrets.APPSEC_GH_TOKEN}} ${{secrets.SNYK_TOKEN}}
+          python ./auto-codeowners/auto-codeowners.py ${{secrets.APPSEC_GH_TOKEN}}
