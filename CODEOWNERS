@@ -1,0 +1,38 @@
+# The following is an example of a CODEOWNERs file
+# that tags important files for an Infosec team
+
+# Ensure infosec team isn't removed from CODEOWNERs
+CODEOWNERS @infosec
+
+# Infosec must vet actions being used
+.github/workflows/** @infosec
+
+## Dependencies added must be vetted by infosec per audit
+
+# Yarn and JS dependencies
+yarn.lock @infosec
+package.json @infosec
+
+# Python dependencies
+requirements.txt @infosec
+setup.py @infosec
+pipfile.lock @infosec
+
+# Ruby dependencies
+Gemfile @infosec
+Gemfile.lock @infosec
+
+# Kotlin dependencies
+versions.properties @infosec
+
+# Go dependencies
+go.mod @infosec
+
+## Infosec must be tagged on SAST/SCA ignore files to ensure ignored findings are acceptable.
+
+# Brakeman Ignore Files
+*brakeman*.ignore @infosec
+
+# Snyk ignore file
+.snyk @infosec
+
