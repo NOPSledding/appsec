@@ -35,7 +35,7 @@ def main(args):
     existing_project_list = []
 
     snyk_projects = {
-        "Projects": {
+        "projects": {
 
         }
     }
